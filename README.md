@@ -1,22 +1,22 @@
-#ZV.Result NuGet Package
+# ZV.Result NuGet Package
 
-##Overview
+## Overview
 The `Result<T>` class provides a standardized way to represent the outcome of an operation. It encapsulates both the result data and any potential error information, making it easier to handle and communicate success and failure scenarios in your application.
 
-##Features
+## Features
 `Succeed Representation:` Encapsulates successful operation results with the data provided.
 `Failure Representation:` Handles error scenarios with detailed error messages.
 `Flexible Error Handling:` Supports both single and multiple error messages.
 `Default HTTP Status Code Handling:` Uses default HTTP status codes for common scenarios, with flexibility to specify custom codes.
 
-##Getting Started
+## Getting Started
 `Installation`
 To integrate ZV.Result into your project, install it via the NuGet package manager:
 ```
 Install-Package ZV.Result
 ```
 
-##Usage
+## Usage
 `Succeed Example`
 ```csharp
 var result = Result<string>.Succeed("Operation completed successfully.");
@@ -27,8 +27,8 @@ var singleErrorResult = Result<string>.Failure("An error occurred.");
 var multipleErrorsResult = Result<string>.Failure(new List<string> { "Error 1", "Error 2" });
 ```
 
-##Results
-`Success Result`
+## Results
+`Successful Result`
 ```csharp
 {
   "data": 5,
@@ -48,5 +48,5 @@ var multipleErrorsResult = Result<string>.Failure(new List<string> { "Error 1", 
   "isSuccesful": false
 }
 ```
-##License
+## License
 ZV.Result is licensed under the MIT License. See the LICENSE file in the source repository for full details.
